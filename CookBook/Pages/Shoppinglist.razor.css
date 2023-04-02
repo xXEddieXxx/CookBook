@@ -1,0 +1,69 @@
+﻿
+input[type=checkbox]:checked ~ .line {
+    text-decoration: line-through;
+}
+
+.iteminput {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 8px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.removeX {
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 2em;
+}
+
+.removeX:hover {
+    background: #bbb;
+}
+
+.oi {
+    font-size: 1.1rem;
+}
+
+.deleteallbutton {
+    width: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 2em;
+    padding: 10px 8px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 0 0 10px;
+}
+
+.deleteallbutton:hover {
+    background: #FF7276;
+}
+
+.addbutton {
+    width: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 2em;
+    padding: 10px 8px;
+    margin: 0 10px 0 0;
+}
+
+.addbutton:hover {
+    background: #5c6bc0;
+}

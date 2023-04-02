@@ -1,0 +1,28 @@
+﻿@page "/shoppinglist"
+@inject IDialogService DialogService
+@using Microsoft.AspNetCore.Components
+
+<PageTitle>Shopping List</PageTitle>
+
+<Virtualize Items="@_items">
+    <div class="flex flex-row justify-between">
+        <div>
+            <input type="checkbox" @context.IsDone/>
+            <em class="line">@context.Title</em>
+        </div>
+        <span class="removeX" @onclick="@(()=> Delete(@context))">&times;</span>
+    </div>
+</Virtualize>
+
+<div class="flex justify-between">
+    <input class="iteminput" placeholder="Shopping Item" @bind="_newItem" @onkeypress="HandleKeyDown"/>
+    <div class="addbutton">
+        <span class=" oi oi-cart" @onclick="AddTodo"></span>
+    </div>
+</div>
+
+<div class="deleteallbutton">
+    <span class="oi oi-trash" @onclick="DeleteAll"></span>
+</div>
+
+
